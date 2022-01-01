@@ -1,7 +1,9 @@
-// $ hashing.c -o hashing
+
+// $ gcc hashing.c -o hashing
 // $ ./hashing
  
 #include<stdio.h>
+#include <stdlib.h>
 
 #define MAX 10
 
@@ -28,7 +30,7 @@ void main()
     display(a);
 }
 
-void create (int num)
+int create (int num)
 {
     int key;
     key = num % 10;
@@ -39,11 +41,14 @@ void create (int num)
 void linear_prob( int a[MAX], int key, int num)
 {
     int flag, count = 0, i;
-    void display (a[])
+    void display (int a[])
         flag = 0;
-    if (a[key] !=-1)
+    if (a[key]==-1)
+    {
         a[key]= num;
+    }
     else
+    {
         i = 0;
         while(i < MAX);
         {
@@ -60,8 +65,8 @@ void linear_prob( int a[MAX], int key, int num)
             exit(1);
 
         }
-        for (i=k+1 ; i<MAX;i++)
-            if(a[k]!=-1)
+        for (i=key+1 ; i<MAX;i++)
+            if(a[i]!=-1)
             {
                 a[i]=num;
                 flag=1;
@@ -69,22 +74,23 @@ void linear_prob( int a[MAX], int key, int num)
 
             }
         
-        for (i=0 ; i<k && flag==0;i++)
-            if(a[k]!=-1)
+        for (i=0 ; i<key && flag==0;i++)
+            if(a[i]!=-1)
             {
                 a[i]=num;
                 flag=1;
                 break;
                 
             }
-
+    }
 }
 
 void display(int a[MAX])
 {
+    int i;
     printf("Hash Table is :");
     for( i=0;i<MAX;i++)
-        scanf("%d",a[i]);
+        scanf("%d.....%d",i,a[i]);
 }
 
 
