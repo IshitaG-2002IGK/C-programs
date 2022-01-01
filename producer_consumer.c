@@ -3,6 +3,7 @@
  
 
 // #include<stdio.h>
+// #include<stdlib.h>
 // int front=-1, rear=-1, buffer[5];
 // void consume()
 // {
@@ -56,9 +57,9 @@
 //     int ch, z;
 //     do
 //     {
-//         printf("PRODUCER_CONSUMER PROBLEM\n");
+//         printf("*************MENU*****************\n");
+//         printf("\n1.Produce an item \n2.Consume an item \n3.Display items \n4.Exit");
 //         printf("Enter a choice");
-//         printf("\n1. Produce an item \n2.Consume an item \n3. Display items \n4 Exit");
 //         scanf("%d",&ch);
 //         switch(ch)
 //         {
@@ -89,6 +90,8 @@
 
 
 #include<stdio.h>
+#include <stdlib.h>
+
 int frnt=-1,rear=-1,buffer[5];
 void consume()
 {
