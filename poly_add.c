@@ -35,7 +35,7 @@ void show(struct link *node)
 {
     while(node->next != NULL)
     {
-        printf("%d x ^ %d", node->coeff, node->pow);
+        printf("%dx^%d", node->coeff, node->pow);
         node =node->next;
         if(node->next != NULL)
             printf("+");
@@ -105,7 +105,7 @@ void main()
         printf("Enter the 2nd number:\n");
         create(poly2);
         printf("Display the 1st number:\n");
-        show(poly2);
+        show(poly1);
         printf("Display the 2nd number:\n");
         show(poly2);
         poly_add(poly1, poly2, poly);
