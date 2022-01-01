@@ -21,7 +21,7 @@ int main()
     int i=0, op1, op2 ;
     printf("Enter the expression :");
     scanf("%s",p);
-    while (ch = p[i++] != '\0')
+    while ((ch = p[i++])!= '\0')
     {
         if (isdigit(ch))
             push(ch-'0');
