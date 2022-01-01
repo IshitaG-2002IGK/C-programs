@@ -1,5 +1,5 @@
-//  $ gcc producer_consumer.c -o producer_consumer
-//  $ ./producer_consumer
+//  $ gcc polynomial_addition.c -o polynomial_addition
+//  $ ./polynomial_addition
  
 
 #include<stdio.h>
