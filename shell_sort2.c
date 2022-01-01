@@ -4,8 +4,8 @@
 #include<stdio.h>
 void shell_sort(int a[], int n)
 {
-    int i, j, k, n, temp;
-    for(i = n/2; i>=0; i=i/2)
+    int i, j, k,temp;
+    for(i = n/2; i>0; i=i/2)
     {
         for(j=i; j<n ;j++)
         {
@@ -33,14 +33,14 @@ void main()
     printf("Enter the elements");
     for( k=0; k<n ; k++)
     {
-        scanf("%d", &k);
+        scanf("%d", &a[k]);
 
     }
-    sorted_array(a, n);
+    shell_sort(a, n);
     printf("Print the soorted list!");
     for( k=0; k<n ; k++)
     {
-        scanf("%d", &k);
+        printf("%d", a[k]);
 
     }
 }
