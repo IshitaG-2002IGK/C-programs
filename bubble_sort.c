@@ -1,3 +1,7 @@
+// $ gcc bubble_sort.c -o bubble_sort
+// $ ./bubble_sort
+ 
+
 #include <stdio.h>
 
 int main()

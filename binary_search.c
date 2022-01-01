@@ -1,3 +1,9 @@
+// $ gcc binary_search.c -o binary_search
+// $ ./binary_search
+ 
+
+ 
+
 #include <stdio.h>
 int main()
 {

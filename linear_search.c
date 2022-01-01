@@ -1,3 +1,8 @@
+// $ gcc linear_search.c -o linear_search
+// $ ./linear_search
+ 
+
+
 #include<stdio.h>
 int main()
 {

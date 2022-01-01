@@ -1,3 +1,8 @@
+// $ gcc insertion_sort.c -o insertion_sort
+// $ ./insertion_sort
+ 
+
+
 #include <stdio.h>
 int main()
 {

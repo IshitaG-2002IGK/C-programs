@@ -1,3 +1,7 @@
+// $ gcc selection_sort.c -o selection_sort
+// $ ./selection_sort
+ 
+
 #include <stdio.h>
 int main()
 {
