@@ -23,28 +23,26 @@ void q_sort(int a[], int left, int right)
     pivot = a[left];
     while(left<right)
     {
-        while(a[right]>=pivot && (left<right))
+        while((a[right]>=pivot) && (left<right))
         {
-            right -- ;
+            right-- ;
             if(left!=right)
             {
                 a[left] = a[right];
-                left ++ ;
+                left++ ;
             }
         }
 
-        while(a[left]>=pivot && (left<right))
+        while((a[left]>=pivot) && (left<right))
         {
             left ++ ;
             if(left!=right)
             {
                 a[right] = a[left];
-                right -- ;
+                right-- ;
 
             }
         }
-
-    }
 
     a[left] =  pivot ;
     pivot   =  left  ;
@@ -56,15 +54,17 @@ void q_sort(int a[], int left, int right)
         q_sort(a, pivot+1, right);
 
 }
-
+}
 void main()
 {
     int i, n, a[100];
     printf("Enter the number of elements:");
     scanf("%d", &n);
     printf("Enter the elements:");
-    for (i=0; i<n; i++)
+    for (i=0; i<n; ++i)
+    {
         scanf("%d", &a[i]);
+    }
     printf("QUICK SORT");
     q_sort(a,0,n-1);
     display(a,n);
