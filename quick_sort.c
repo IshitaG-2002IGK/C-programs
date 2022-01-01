@@ -53,7 +53,7 @@ void q_sort(int a[], int left, int right)
     if (right > pivot)
         q_sort(a, pivot+1, right);
 
-}
+    }
 }
 void main()
 {
