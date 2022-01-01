@@ -9,7 +9,7 @@ void shell_sort(int a[], int n)
     {
         for(j=i; j<n ;j++)
         {
-            for(k=j-i; k>=0; k=k+i)
+            for(k=j-i; k>=0; k=k-i)
             {
                 if(a[k+i]> a[k])
                     break;
