@@ -42,7 +42,7 @@ void linear_prob( int a[MAX], int key, int num)
 {
     int flag, count = 0, i;
     void display (int a[]);
-        flag = 0;
+    flag = 0;
     if (a[key]==-1)
     {
         a[key]= num;
