@@ -22,7 +22,7 @@ int main()
         a[pos]=temp;
         }
     }
-    printf("Sorted Array:");
+    printf("Sorted Array:"); 
     for(i = 0; i < n; i++)
         printf("%d", a[i]);
     return 0;
