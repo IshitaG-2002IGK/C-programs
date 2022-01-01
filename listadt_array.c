@@ -9,12 +9,12 @@ void insert();
 void delete();
 void search();
 void display();
-int a, b[], n, p, e, f, i ,pos, flag;
+int a, b[20], n, p, e, f, i ,pos, flag;
 void main()
 {
     int ch;
-    printf("\n LIST ADT using ARRAY :"\n);
-    printf("**********MENU**********")
+    printf("\n LIST ADT using ARRAY :\n");
+    printf("**********MENU**********");
     printf("\n1.Create \n2.Insert \n3.Delete \4.Search \5.Display \6.Exit \n");
     do
     {
@@ -56,9 +56,9 @@ void create()
 {
     printf("\nEnter the nodes:");
     scanf("%d", &n);
-    for(i=-;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        printf("Enter the elements", i+1);
+        printf("Enter the elements");
         scanf("%d", &b[i]);
 
 
@@ -148,6 +148,6 @@ void display()
     printf("List elements are:\n");
     for(i=0;i<n;i++)
     {
-        printf("%d",b][i]);
+        printf("%d",b[i]);
     }
 }
