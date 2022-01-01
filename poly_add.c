@@ -3,6 +3,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+
 struct link 
 {
     int coeff;
@@ -25,7 +26,7 @@ void create(struct link *node)
         node = node->next;
         node->next = NULL;
         printf("\n Do you wish to continue(y/n) :");
-        ch = getch();
+        ch = getchar();
 
     }while (ch =='y' || ch =='Y');
 }
@@ -111,7 +112,7 @@ void main()
         printf("Additon of the polynomials are :\n");
         show(poly);
         printf("Wish to add more numbers :");
-        ch = getch();
+        ch = getchar();
 
     }while (ch =='y' || ch =='Y');
 }

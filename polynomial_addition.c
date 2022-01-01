@@ -1,5 +1,5 @@
-// $ gcc poly_add.c -o poly_add
-// $ ./poly_add
+// $ gcc polynomial_addition.c -o polynomial_addition
+// $ ./polynomial_addition
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -24,7 +24,7 @@ void create(struct link *node)
           node=node->next;
           node->next=NULL;
           printf("\n Continue(y/n):");
-          ch=getch();
+          ch=getchar();
      }
      while(ch=='y' || ch=='Y');
 }
@@ -84,7 +84,7 @@ void polyadd(struct link *poly1,struct link *poly2,struct link *poly)
            poly->next=NULL;
      }
 }
-main()
+void main()
 {
       char ch;
       do
@@ -104,7 +104,7 @@ main()
            printf("\nAdded polynomial:");
            show(poly);
            printf("\n Add two more numbers:");
-           ch=getch();
+           ch=getchar();
       }
       while(ch=='y' || ch=='Y');
 }
