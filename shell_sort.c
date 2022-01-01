@@ -3,12 +3,12 @@
  
 
 #include <stdio.h>
-void shellsort(int arr[], int num)
+void shellsort(int arr[], int n)
 {
-    int i, j, k, tmp;
-    for (i = num / 2; i > 0; i = i / 2)
-    {
-        for (j = i; j < num; j++)
+    int i, j, k, temp;
+    for (i = n / 2; i > 0; i = i / 2)
+    
+        for (j = i; j < n; j++)
         {
             for(k = j - i; k >= 0; k = k - i)
             {
@@ -16,9 +16,9 @@ void shellsort(int arr[], int num)
                     break;
                 else
                 {
-                    tmp = arr[k];
+                    temp = arr[k];
                     arr[k] = arr[k+i];
-                    arr[k+i] = tmp;
+                    arr[k+i] = temp;
                 }
             }
         }
@@ -27,18 +27,18 @@ void shellsort(int arr[], int num)
 int main()
 {
     int arr[30];
-    int k,  num;
+    int k,  n;
     printf("Enter total no. of elements : ");
-    scanf("%d", &num);
-    printf("\nEnter %d numbers: ", num);
+    scanf("%d", &n);
+    printf("\nEnter %d nbers: ", n);
  
-    for (k =  0 ; k < num; k++)
+    for (k =  0 ; k < n; k++)
     {
         scanf("%d", &arr[k]);
     }
-    shellsort(arr, num);
+    shellsort(arr, n);
     printf("\n Sorted array is: ");
-    for (k = 0; k < num; k++)
+    for (k = 0; k < n; k++)
         printf("%d ", arr[k]);
     return 0;
 }
