@@ -3,9 +3,10 @@
  
 #define SIZE 50
 #include <ctype.h>
+#include <stdio.h>
 int s[SIZE];
 int top = -1;
-push(int elem)
+int push(int elem)
 { 
     s[top++] = elem;
 }
@@ -14,7 +15,7 @@ int pop()
     return (s[top--]);
 }
 
-main()
+int main()
 {
     char p[50], ch;
     int i=0, op1, op2 ;
@@ -26,6 +27,7 @@ main()
             push(ch-'0');
         
         else
+        {
             op2 = pop();
             op1 = pop();
             switch (ch)
@@ -43,9 +45,10 @@ main()
                             push(op1/op2);
                             break;
             }
+        }
     }
 
-    printf ("The original expression is :%s", p) ;
+    printf ("\n The original expression is :%s", p) ;
     printf ("The evaluated expression is :%d", s[top]) ;
 
 }
