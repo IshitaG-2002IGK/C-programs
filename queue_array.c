@@ -55,8 +55,7 @@ void enQueue(int value)
     {
         if(front==-1)
             front =0;
-        else
-            rear ++;
+        rear ++;
         queue[rear] = value ;
         printf("\nInsertion success!");
 
