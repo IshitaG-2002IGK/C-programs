@@ -23,7 +23,7 @@ void main()
         scanf("%d", &num);
         key = create (num);
         linear_prob(a, key, num);
-        printf("Do you wish to continue?(1/0");
+        printf("Do you wish to continue?(1/0)");
         scanf("%d", &ans);
     
     } while(ans == 1);
@@ -41,7 +41,7 @@ int create (int num)
 void linear_prob( int a[MAX], int key, int num)
 {
     int flag, count = 0, i;
-    void display (int a[])
+    void display (int a[]);
         flag = 0;
     if (a[key]==-1)
     {
@@ -66,6 +66,7 @@ void linear_prob( int a[MAX], int key, int num)
 
         }
         for (i=key+1 ; i<MAX;i++)
+        {
             if(a[i]!=-1)
             {
                 a[i]=num;
@@ -73,15 +74,18 @@ void linear_prob( int a[MAX], int key, int num)
                 break;
 
             }
+        }
         
         for (i=0 ; i<key && flag==0;i++)
-            if(a[i]!=-1)
+        {
+           if(a[i]!=-1)
             {
                 a[i]=num;
                 flag=1;
                 break;
                 
             }
+        }
     }
 }
 
@@ -89,8 +93,8 @@ void display(int a[MAX])
 {
     int i;
     printf("Hash Table is :");
-    for( i=0;i<MAX;i++)
-        scanf("%d.....%d",i,a[i]);
+    for( i=0; i<MAX; i++)
+        printf("%d.....%d",i,a[i]);
 }
 
 
