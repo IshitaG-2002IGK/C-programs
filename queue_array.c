@@ -2,6 +2,7 @@
 // $ ./queue_array
 
 #include<stdio.h>
+#include<stdlib.h>
 void enQueue(int);
 void deQueue();
 void display();
@@ -70,7 +71,7 @@ void deQueue()
     }
     else
     {
-        printf("Deleted element is:", queue[front])
+        printf("Deleted element is:%d", queue[front]);
         front ++;
 
     }
@@ -78,11 +79,11 @@ void deQueue()
 
 void display()
 {
-    if(rear = -1)
+    if(rear == -1)
     {
         printf("\nQueue is empty!!\n");
     }
     int i;
     for(i=front; i<rear; i++)
-        printf("%d\n", queue[i])
+        printf("%d\n", queue[i]);
 }
