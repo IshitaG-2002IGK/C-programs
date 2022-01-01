@@ -2,6 +2,7 @@
 // $ ./stack_array
 
 #include<stdio.h>
+#include<stdlib.h>
 void push(int);
 void pop();
 void display();
@@ -9,19 +10,19 @@ int n, stack[100], top =-1;
 void main()
 {
     int value, choice;
-    printf("Stack ADT using array");
-    printf("Enter the size of array");
+    printf("\nStack ADT using array\n");
+    printf("\nEnter the size of array\n");
     scanf("%d", &n);
     printf("******MENU********");
-    printf("\n1.Push \n2.Pop \n3.Display \n4.Exit");
+    printf("\n1.Push \n2.Pop \n3.Display \n4.Exit \n");
     while(1)
     {
-        printf("Enter your choice :\n");
+        printf("\nEnter your choice :\n");
         scanf("%d",&choice);
         switch(choice)
         {
             case 1: 
-                    printf("Enter the value to be inserted:\n");
+                    printf("\n Enter the value to be inserted:\n");
                     scanf("%d",&value);
                     push(value);
                     break;
@@ -32,7 +33,7 @@ void main()
             
             case 3: 
                     display();
-                    break();
+                    break;
             
             case 4:
                     exit(0);
@@ -68,7 +69,7 @@ void pop()
     }
     else
     {
-        printf("The deleted element is :", stack[top]);
+        printf("The deleted element is :%d", stack[top]);
         top -- ;
 
     }
@@ -82,7 +83,7 @@ void display()
     }
     int i;
     printf("The stack elements are:\n");
-    for(i=top ;i>=0; i++)
+    for(i=top ;i>=0; i--)
     {
         printf("|%d|\n", stack[i]);
     }
