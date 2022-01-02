@@ -18,7 +18,7 @@ void main()
     int value, ch;
     printf("\nStack ADT using Linked Lists!\n");
     printf("*****MENU******");
-    printf("\n1.PUSH \n2.POP \n3. DISPLAY \4.EXIT\n");
+    printf("\n1.PUSH \n2.POP \n3.DISPLAY \n4.EXIT\n");
     while(1)
     {
         printf("\nEnter you choice:\n");
