@@ -109,7 +109,7 @@ void find(struct tree*t, int element)
     else 
     {
         printf("\nElement found at position:%d", t->data);
-
+        return;
     }
 
 }
@@ -118,8 +118,12 @@ struct tree*findmin(struct tree*t)
 {
     if(t ==NULL)
         return NULL;
-    if(t->lchild ==NULL)
-        return (findmin(t->lchild));
+    else
+    {
+        if(t->lchild ==NULL)
+            return t;
+        else
+            return (findmin(t->lchild));
 
 }
 
