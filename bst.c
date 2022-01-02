@@ -131,7 +131,7 @@ struct tree*insert(struct tree*t, int element)
 {
     if(t==NULL)
     {
-        t= (struct tree*)malloc(sizeof(struct tree));
+        t=(struct tree*)malloc(sizeof(struct tree));
         t->data= element;
         t->lchild =NULL;
         t->rchild =NULL;
@@ -153,7 +153,8 @@ struct tree*insert(struct tree*t, int element)
         {
             printf("\nAlready exisiting!");
         }
-        
+        return t;
+
     }
 
 }
@@ -184,12 +185,14 @@ struct tree*delete(struct tree*t, int element)
         temp=t;
         if(t->lchild == NULL)
             t= t->rchild;
-        if(t->rchild == NULL)
+        else if(t->rchild == NULL)
+        {
             t= t->lchild;
-        free(temp);
+            free(temp);
+        }
 
     }
-
+    return t;
 
 
 }
