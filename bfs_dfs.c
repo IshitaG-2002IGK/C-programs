@@ -2,22 +2,23 @@
 // $ ./bfs_dfs
  
 #include<stdio.h>
+#include<stdlib.h>
 
-int a[50][50],nn visited[50];
+int a[50][50],n,visited[50];
 int q[2], front =-1, rear= -1;
 int s[20], top=-1, count =0;
 
 void bfs(int v)
 {
-    int i, curr;
-    visited[i]= 1;
+    int i, cur;
+    visited[v]= 1;
     q[++rear]= v;
     while(front!=rear)
     {
-        curr = q[++front];
+        cur = q[++front];
         for(i=1;i<n;i++)
         {
-            if((a[curr][i]==1 )&& (visited[i]==0))
+            if((a[cur][i]==1 )&& (visited[i]==0))
             {
                 visited[i]=1;
                 q[++rear]=i;
@@ -46,7 +47,7 @@ int main()
 {
     int start, ch, i, j;
     printf("\nEnter the number of vertices :");
-    sacnf("%d", &n);
+    scanf("%d", &n);
     for(i=1;i<n;i++)
     {
         for(j=1;j<n;j++)
@@ -56,7 +57,7 @@ int main()
 
         }
     }
-    printf("\nThe adjacency matrix is:");
+    printf("\nThe adjacency matrix is:\n");
     for(i=1;i<n;i++)
     {
         for(j=1;j<n;j++)
@@ -64,7 +65,7 @@ int main()
             printf("%d",a[i][j]);
 
         }
-        print("\n");
+        printf("\n");
     }
 
     do
