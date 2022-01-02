@@ -61,7 +61,7 @@ void main()
             
             case 5:
                     temp = findmin(t);
-                    printf("\n Minimum element is:%d", t->data);
+                    printf("\n Minimum element is:%d", temp->data);
                     break;
             
             case 6:
