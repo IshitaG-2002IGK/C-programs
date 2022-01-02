@@ -124,7 +124,7 @@ struct tree*findmin(struct tree*t)
             return t;
         else
             return (findmin(t->lchild));
-
+    }
 }
 
 struct tree*insert(struct tree*t, int element)
