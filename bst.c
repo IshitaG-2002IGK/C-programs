@@ -82,3 +82,148 @@ void main()
         }
     }while(ch <=9);
 }
+
+struct tree*create(struct tree*t, int element)
+{
+    t= (struct tree*)malloc(sizeof(stuct tree));
+    t->data= element;
+    t->lchild =NULL;
+    t->rchild =NULL;
+    return t;
+
+}
+struct tree*find(struct tree*t, int element)
+{
+    if((t==NULL)
+    {
+        printf("\nElement not found\n");
+    }
+    else if(element < t->data)
+    {
+        find(t->lchild,element);
+    }
+    else if(element > t->data)
+    {
+        find(t->rchild,element);
+    }
+    else 
+    {
+        printf("\nElement found at position:%d", t->data);
+
+    }
+
+}
+
+struct tree*findmin(struct tree*t)
+{
+    if(t ==NULL)
+7       return NULL;
+    if(t->child ==NULL)
+        return (findmin(t->lchild));
+
+}
+
+struct tree*insert(struct tree*t, int element)
+{
+    if(t==NULL)
+    {
+        t= (struct tree*)malloc(sizeof(stuct tree));
+        t->data= element;
+        t->lchild =NULL;
+        t->rchild =NULL;
+        return t;
+    }   
+    else
+    {
+        if(element< t->data)
+        {
+            t->lchild = insert(t->lchild, element);
+            
+        }
+        else if(element> t->data)
+        {
+            t->rchild = insert(t->rchild, element);
+            
+        }
+        else if (element == t->data)
+        {
+            printf("\nAlready exisiting!");
+        }
+        
+    }
+
+}
+
+struct tree*delete(struct tree*t, int element)
+{
+    if(t==NULL)
+    {
+        printf("\nElement not found!");
+    }
+    else if( element <t=>data)
+    {
+        t->lchild = delete(t->lchild, element);
+    }
+    else if( element >t=>data)
+    {
+        t->rchild = delete(t->rchild, element);
+    }
+    else if(t->lchild && t->rchild)
+    {
+        temp =findin(t->rchild);
+        t->data = temp->data;
+        t->rchild = delete(t->rchild, t->data);
+
+    }
+    else
+    {
+        temp=t;
+        if(t->lchild == NULL)
+            t= t->rchild;
+        if(t->rchild == NULL)
+            t= t->lchild;
+        free(temp);
+
+    }
+
+
+
+}
+
+void inorder(struct tree*t)
+{
+    if(t == NULL)
+        return;
+    else
+    {
+        inorder(t->lchild);
+        printf("%d\n", t->data);
+        inorder(t->rchild);
+    }
+}
+
+
+void preorder(struct tree*t)
+{
+    if(t == NULL)
+        return;
+    else
+    {
+        printf("%d\n", t->data);
+        preorder(t->lchild);
+        preorder(t->rchild);
+    }
+}
+
+
+void postorder(struct tree*t)
+{
+    if(t == NULL)
+        return;
+    else
+    {
+        postorder(t->lchild);
+        postorder(t->rchild);
+        printf("%d\n", t->data);
+    }
+}
