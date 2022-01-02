@@ -1,4 +1,4 @@
-//  $ gcc radix_sort.c -o radix_sort
+//  $ gcc rarrdix_sort.c -o radix_sort
 //  $ ./radix_sort
  
 
