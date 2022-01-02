@@ -2,8 +2,8 @@
 // $ ./topsort
 
 #include<stdio.h>
- 
-void main()
+
+int main()
 {
     int i, j,k,n,a[20][20],indeg[10], flag[10],count=0;
     printf("\nEnter the no. of vertices:\n");
