@@ -69,10 +69,10 @@ int main()
     insertRight(root,3);
     insertLeft(root->left,4);
 
-    printf("Inorder traveral is:\n");
+    printf("\nInorder traveral is:\n");
     intrav(root);
-    printf("Preorder traveral is:\n");
+    printf("\nPreorder traveral is:\n");
     pretrav(root);
-    printf("Postorder traveral is:\n");
+    printf("\nPostorder traveral is:\n");
     posttrav(root);
 }
