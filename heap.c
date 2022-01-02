@@ -1,3 +1,7 @@
+
+// $ gcc heap.c -o heap
+// $ ./heap
+
 #include<stdio.h>
 #include<limits.h>
  
