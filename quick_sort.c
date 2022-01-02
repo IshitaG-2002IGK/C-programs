@@ -1,5 +1,5 @@
-// // $ gcc quick_sort.c -o quick_sort
-// // $ ./quick_sort
+//  $ gcc quick_sort.c -o quick_sort
+//  $ ./quick_sort
  
 
 #include <stdio.h>

@@ -29,7 +29,8 @@ for(i=0;i<n;i++)
  
 printf("\nThe topological order is:");
  
-while(count<n){
+while(count<n)
+{
     for(k=0;k<n;k++)
     {
         if((indeg[k]==0) && (flag[k]==0))
@@ -42,9 +43,9 @@ while(count<n){
             if(a[i][k]==1)
                 indeg[k]--;
         
-        }
-        count++;
     }
+    count++;
+}
  
-    return 0;
+return 0;
 }
