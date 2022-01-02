@@ -50,17 +50,18 @@ void main()
 void enQueue(int value)
 {
     struct node*newNode;
-    newNode=(struct node)malloc(sizeof(struct node));
+    newNode=(struct node*)malloc(sizeof(struct node));
     newNode->data = value;
     newNode->next = NULL;
     if(front ==NULL)
-        front=rear=0;
+        front=rear=newNode;
     else
     {
-        rear = rear->next;
+        rear->next=newNode;
         rear = newNode;
     
     }
+    printf("\nInsertion success");
         
 }
 
@@ -72,8 +73,8 @@ void deQueue()
     else
     {
         struct node*temp = front;
-        printf("\nThe deleted element is:%d", temp->data);
         front = front->next;
+        printf("\nThe deleted element is:%d", temp->data);
         free(temp);
 
     }
@@ -86,12 +87,13 @@ void display()
     else
     {
         struct node*temp = front;
-        if(temp->next!= NULL)
+        while(temp->next!= NULL)
         {
 
             printf("%d-->", temp->data);
             temp = temp->next;
         }
+        printf("%d-->NULL", temp->data);
     }
-    printf("%d-->NULL", temp->data);
+    
 }
