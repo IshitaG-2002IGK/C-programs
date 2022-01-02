@@ -41,7 +41,8 @@ void main()
             case 4:
                     exit(0);
                     break;
-            default("\nWrong option!");
+            default:
+                    printf("\nWrong option!");
         }
     }
 }
@@ -49,8 +50,8 @@ void main()
 void push(int value)
 {
     struct node*newNode;
-    newNode = (struct node*)malloc(sizeof(stucr node));
-    newNode->data = element;
+    newNode = (struct node*)malloc(sizeof(struct node));
+    newNode->data = value;
     if(top == NULL)
         newNode->next=NULL;
     else    
@@ -84,14 +85,13 @@ void display()
     else
     {
         struct node*temp= top;
-        while(temp=>next!=NULL)
+        while(temp->next!=NULL)
         {
             printf("|%d|-->", temp->data);
             temp = temp->next;
 
         }
+        printf("|%d|-->NULL", temp->data);
     }
-    printf("|%d|--<NULL", temp->data);
     
-
 }
