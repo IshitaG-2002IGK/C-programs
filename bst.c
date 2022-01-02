@@ -56,7 +56,7 @@ void main()
             case 4:
                     printf("\nEnter the data element:");
                     scanf("%d", &element);
-                    t=cfind(t,element);
+                    find(t,element);
                     break;
             
             case 5:
@@ -85,16 +85,16 @@ void main()
 
 struct tree*create(struct tree*t, int element)
 {
-    t= (struct tree*)malloc(sizeof(stuct tree));
+    t= (struct tree*)malloc(sizeof(struct tree));
     t->data= element;
     t->lchild =NULL;
     t->rchild =NULL;
     return t;
 
 }
-struct tree*find(struct tree*t, int element)
+void find(struct tree*t, int element)
 {
-    if((t==NULL)
+    if(t==NULL)
     {
         printf("\nElement not found\n");
     }
@@ -117,8 +117,8 @@ struct tree*find(struct tree*t, int element)
 struct tree*findmin(struct tree*t)
 {
     if(t ==NULL)
-7       return NULL;
-    if(t->child ==NULL)
+        return NULL;
+    if(t->lchild ==NULL)
         return (findmin(t->lchild));
 
 }
@@ -127,7 +127,7 @@ struct tree*insert(struct tree*t, int element)
 {
     if(t==NULL)
     {
-        t= (struct tree*)malloc(sizeof(stuct tree));
+        t= (struct tree*)malloc(sizeof(struct tree));
         t->data= element;
         t->lchild =NULL;
         t->rchild =NULL;
@@ -160,17 +160,17 @@ struct tree*delete(struct tree*t, int element)
     {
         printf("\nElement not found!");
     }
-    else if( element <t=>data)
+    else if( element <t->data)
     {
         t->lchild = delete(t->lchild, element);
     }
-    else if( element >t=>data)
+    else if( element > t->data)
     {
         t->rchild = delete(t->rchild, element);
     }
     else if(t->lchild && t->rchild)
     {
-        temp =findin(t->rchild);
+        temp =findmin(t->rchild);
         t->data = temp->data;
         t->rchild = delete(t->rchild, t->data);
 
