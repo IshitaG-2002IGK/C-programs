@@ -78,7 +78,8 @@ void main()
             case 9: 
                     exit(0);
         
-
+            default:
+                    printf("Wroong option!");
         }
     }while(ch <=9);
 }
